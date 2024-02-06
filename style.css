@@ -24,11 +24,54 @@
     --clr-text-pri: #aca3de;  
     --clr-text-sec: #cdc8eb;  
     --clr-text-thi: #eeedf8;  
+
+    --clr-default-main: #5847bc;
+    --clr-default-pri: #aca3de;  
+    --clr-default-sec: #cdc8eb;  
+    --clr-default-thi: #eeedf8; 
+
+    --clr-brown-main: #250a01;
+    --clr-brown-pri: #c19a6b;  
+    --clr-brown-sec: #FAD6A5;  
+    --clr-brown-thi: #e2c275; 
+
+    --clr-blue-main: #002D62;
+    --clr-blue-pri: #007FFF;  
+    --clr-blue-sec: #6CB4EE;  
+    --clr-blue-thi: #89CFF0;
     
     --logo-pri: #3c5b93;    
     --logo-sec: #2aa4ee;    
     --main-ff: 'Poppins', sans-serif;
-  }
+}
+
+body.premium {
+    background-color: var(--clr-bg-main);
+    --clr-text-main: var(--clr-default-main);
+    --clr-text-pri: var(--clr-default-pri);  
+    --clr-text-sec: var(--clr-default-sec);  
+    --clr-text-thi: var(--clr-default-thi);
+}
+  
+body.brown {
+    background-color: #250a01;
+    --clr-text-main: var(--clr-brown-main);
+    --clr-text-pri: var(--clr-brown-pri);  
+    --clr-text-sec: var(--clr-brown-sec);  
+    --clr-text-thi: var(--clr-brown-thi);
+}
+  
+body.blue {
+    /* background-color: radial-gradient(#00bbe4, #011650); */
+    background-color: #00bbe4;
+    --clr-text-main: var(--clr-blue-main);
+    --clr-text-pri: var(--clr-blue-pri);  
+    --clr-text-sec: var(--clr-blue-sec);  
+    --clr-text-thi: var(--clr-blue-thi);
+    transition: 1s;
+
+
+}
 
 /*===== BASE =====*/
 
@@ -51,6 +94,7 @@ body {
     color: var(--clr-text-main);
     width: 100%;
     min-height: 100vh;
+    transition: 1s;
 }   
 
 h1, h2, h3, h4,
@@ -204,7 +248,7 @@ body {
 .container {
     width: 90%;
     max-width: 780px;
-    background-color: var(--clr-bg-main);
+    background-color: none;
     position: relative;
     margin: 1rem auto;
     animation: scaleUp 1s ease-in-out;
@@ -331,6 +375,7 @@ li.active {
     align-items: center;
     border-radius: .2rem;
     color: white;
+    cursor: pointer;
 }
 
 .btns2 > div > svg {
@@ -365,6 +410,7 @@ li.active {
     top: 50%; left: 50%;
     transform: translate(-50%,-50%);
     animation: pulse2 7s linear infinite;
+    transition: 1s;
   }
   
   .circle1 svg{
@@ -376,6 +422,8 @@ li.active {
     top: 50%; left: 50%;
     transform: translate(-50%,-50%);
     animation: pulse 5s linear infinite;
+    transition: 1s;
+
   }
   
   .circle2 svg{
@@ -387,6 +435,8 @@ li.active {
     top: 50%; left: 50%;
     transform: translate(-50%,-50%);
     animation: pulse 4s linear infinite;
+    transition: 1s;
+
   }
   
   .circle3 svg{
@@ -398,6 +448,8 @@ li.active {
     top: 50%; left: 50%;
     transform: translate(-50%,-50%) scale(1);
     animation: pulse 3s linear infinite;
+    transition: 1s;
+
   }
   
   @keyframes pulse{
@@ -411,3 +463,4 @@ li.active {
     50%{transform: translate(-50%,-50%) scale(.5)}
     100%{transform: translate(-50%,-50%) scale(1)}
   }
+
